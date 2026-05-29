@@ -4,7 +4,7 @@ A responsive React application that helps crypto investors identify tax-loss har
 
 ## Live Demo
 
-[Deployed Link](#) _(to be updated after deployment)_
+[https://koinx-tax-loss-harvesting-blue.vercel.app/](https://koinx-tax-loss-harvesting-blue.vercel.app/)
 
 ## Features
 
