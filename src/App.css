@@ -1,0 +1,90 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px 32px 32px;
+}
+
+/* Page title row */
+.app__title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.app__title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.app__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  background-color: var(--color-badge-bg);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Disclaimer spacing */
+.app__disclaimer {
+  margin-bottom: 16px;
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app__animated {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+.app__animated--delay-1 {
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
+}
+
+.app__animated--delay-2 {
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}
+
+.app__animated--delay-3 {
+  animation-delay: 0.3s;
+  animation-fill-mode: both;
+}
+
+@media (max-width: 768px) {
+  .app__content {
+    padding: 16px 16px 32px;
+  }
+
+  .app__title {
+    font-size: 1.25rem;
+  }
+
+  .app__badge {
+    font-size: 0.7rem;
+    padding: 3px 10px;
+  }
+}

@@ -1,0 +1,131 @@
+.how-it-works {
+  position: relative;
+  display: inline-block;
+}
+
+.how-it-works__trigger {
+  background: none;
+  border: none;
+  color: var(--color-accent-light);
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.how-it-works__trigger:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+/* Popover */
+.how-it-works__popover {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 100;
+  width: 380px;
+  padding: 20px;
+  background-color: #1a2235;
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-elevated);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity var(--transition-normal), transform var(--transition-normal),
+    visibility var(--transition-normal);
+}
+
+.how-it-works__popover--open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Arrow */
+.how-it-works__popover::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 24px;
+  width: 12px;
+  height: 12px;
+  background-color: #1a2235;
+  border-left: 1px solid var(--color-card-border);
+  border-top: 1px solid var(--color-card-border);
+  transform: rotate(45deg);
+}
+
+.how-it-works__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.how-it-works__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+.how-it-works__bullet {
+  color: var(--color-accent);
+  font-size: 0.55rem;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.how-it-works__pro-tip {
+  padding: 12px 14px;
+  background: rgba(59, 130, 246, 0.08);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.how-it-works__pro-tip-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent-light);
+  margin-bottom: 4px;
+}
+
+.how-it-works__pro-tip-text {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Backdrop for click-outside closing */
+.how-it-works__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+}
+
+@media (max-width: 768px) {
+  .how-it-works__popover {
+    width: 300px;
+    left: -20px;
+    padding: 16px;
+  }
+
+  .how-it-works__trigger {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-it-works__popover {
+    width: 260px;
+    left: -40px;
+  }
+}
